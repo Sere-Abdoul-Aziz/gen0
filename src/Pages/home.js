@@ -6,7 +6,8 @@ import CardContent from '@mui/joy/CardContent';
 import Box from '@mui/joy/Box';
 import Navbar from '../Components/navbar';
 import MediaCover from '../Components/picture';
-import Scroll_triggered from '../Components/Scroll-triggered.tsx';
+ import Scrool from '../Components/scrool.tsx';
+import Square from '../Components/square.tsx';
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
       </div>
       <section style={{ padding: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'pink' }}>
         <div style={{ flex: 1 }} >
+          
           <Box
             sx={{
               width: '100%',
@@ -29,23 +31,32 @@ const HomePage = () => {
               gridTemplateColumns: 'repeat(auto-fill, minmax(500px, 1fr))',
             }}
           >
+           
+            
             <Card variant="soft"
               sx={{
                 borderRadius: '200px 200px 30px 30px', // Arrondir les coins supérieurs gauche, supérieurs droit et inférieur gauche
                 marginLeft: '100px', // Ajuster la marge à droite pour décaler la carte
               }}
             >
+              
               <CardContent>
                 {/* Contenu de la carte */}
               </CardContent>
             </Card>
+            
           </Box>
         </div>
+        
+        
+      
         <div style={{ flex: 1 }}>
-          <h2>Notre Mission</h2>
-          <p>Nous sommes là pour rendre votre événement inoubliable...</p>
-        </div>
-
+            <h2>Notre Mission</h2>
+            <p>Nous sommes là pour rendre votre événement inoubliable...</p>
+          </div>
+          
+        
+       
 
       </section>
       <div >
@@ -168,8 +179,9 @@ const HomePage = () => {
 
 
         </section>
-        <section>
-        <Scroll_triggered/>
+        <section style={{ height: "calc(100vh - 100px)", overflow: "scroll", padding: '40px', alignItems: 'center', justifyContent: 'center', backgroundColor: 'blue' }} >
+        <Scrool/> 
+        
         </section>
       </div>
 

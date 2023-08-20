@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import HomePage from './Pages/home';
-import Scroll_triggered from './Components/Scroll-triggered.tsx';
+// import Scroll_triggered from './Components/Scroll-triggered.tsx';
 function App() {
   return (
     <div className="App">
-      <Scroll_triggered/>
+      <HomePage/>
     </div>
   );
 }
