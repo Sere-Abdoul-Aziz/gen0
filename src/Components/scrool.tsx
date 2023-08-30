@@ -28,6 +28,7 @@ function Card({ imageSrc, hueA, hueB }: Props) {
   const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`;
 
   return (
+    
     <motion.div
       className="card-container"
       initial="offscreen"
@@ -43,14 +44,12 @@ function Card({ imageSrc, hueA, hueB }: Props) {
 }
 
 const food: [string, number, number][] = [
-  ["https://scontent.foua2-1.fna.fbcdn.net/v/t39.30808-6/365776557_238844759111242_528672792154084087_n.jpg?stp=dst-jpg_p526x296&_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeEHOstum0xE550qSnbyM2S-glSAZ2JFch6CVIBnYkVyHkvbAcXbNSIO4w8unaAQFWAf-WLd86ZKrO0sKLkc7ZJm&_nc_ohc=gRhdlzGPvrcAX88ZKoT&_nc_ht=scontent.foua2-1.fna&oh=00_AfCsK7Uj3zuTBiTX4YJYZsehspn2362OWYmy7mq2d3gRmg&oe=64E6951A", 340, 10],
-  ["https://scontent.foua2-1.fna.fbcdn.net/v/t39.30808-6/368007507_243121005350284_2509348996313371806_n.jpg?stp=dst-jpg_s960x960&_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGcfUOm4D1D6WJnWHwa-2OUXvkxiFYqyYpe-TGIVirJirdwzS_K9MoAO82FqJkGayzmyXPh9eeRHcbk9CcnT5Az&_nc_ohc=1W3xUCdLxL4AX_lu3FU&_nc_ht=scontent.foua2-1.fna&oh=00_AfDRflN1Q_d3mh63il51OySvSxAttMRKdG1ECmEUJL0OJA&oe=64E7C65F", 20, 40],
-  ["https://scontent.foua2-1.fna.fbcdn.net/v/t39.30808-6/365787115_238825899113128_4682528688286924241_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHR9547yPcSe0jrDxfYCggRzp45rc4dmWnOnjmtzh2ZaQ49J57RkXZ9FgXtIJ8qx3u4RediMzNzKYYwVzdafUwe&_nc_ohc=bxIfOvfKTQMAX-Qh-us&_nc_ht=scontent.foua2-1.fna&oh=00_AfD2D_eg5bKHJTN9zwNJqDZifTlwdwOEj-oUOi3_43O4Lg&oe=64E815A4", 60, 90],
-  ["🍐", 80, 120],
-  ["🍏", 100, 140],
-  ["🫐", 205, 245],
-  ["🍆", 260, 290],
-  ["🍇", 290, 320]
+  ["https://scontent.foua1-1.fna.fbcdn.net/v/t39.30808-6/368007507_243121005350284_2509348996313371806_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGcfUOm4D1D6WJnWHwa-2OUXvkxiFYqyYpe-TGIVirJirdwzS_K9MoAO82FqJkGayzmyXPh9eeRHcbk9CcnT5Az&_nc_ohc=YO0y1PNYBqQAX8izEe6&_nc_zt=23&_nc_ht=scontent.foua1-1.fna&oh=00_AfCIrkrZ4h56SQlfStGDeP8DUzQWDrKKvR6EQ4xKkh1f4w&oe=64F3A3DF", 340, 10],
+  ["https://scontent.foua1-1.fna.fbcdn.net/v/t39.30808-6/365776557_238844759111242_528672792154084087_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeEHOstum0xE550qSnbyM2S-glSAZ2JFch6CVIBnYkVyHkvbAcXbNSIO4w8unaAQFWAf-WLd86ZKrO0sKLkc7ZJm&_nc_ohc=GMCSZB23a-gAX-bDVjS&_nc_zt=23&_nc_ht=scontent.foua1-1.fna&oh=00_AfB-lMJfjc6_IsPIWbNQ1iJPsKMJ59qDJkTfO6pi2OY3wQ&oe=64F46CDA", 20, 40],
+  ["https://scontent.foua1-1.fna.fbcdn.net/v/t39.30808-6/365774376_238836609112057_1807005516239864233_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeFi9wRyRn4mKvyA1nYWXpdSoEwn-y-n2SWgTCf7L6fZJcbTWbBTQnkwZhsZWdvleug_6Kubv4-mxPmZqUorPRDw&_nc_ohc=8YGR2cQiEQgAX8t0_ib&_nc_zt=23&_nc_ht=scontent.foua1-1.fna&oh=00_AfDhYBfb7ylVnO6xgWpb3MdXTgCIvwAECV0h_-pMrfKQUQ&oe=64F4D5C8", 60, 90],
+  ["https://scontent.foua1-1.fna.fbcdn.net/v/t39.30808-6/363979827_238828579112860_3648883382059748956_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeG1qdsPlz86ROTC1biR-j2x_UczD4QeLF_9RzMPhB4sX21lABeDORy5sLp2luqZFw6wiJxAASC-23ONKx8YbVqo&_nc_ohc=Ou5PhPm1kqIAX8k8WiX&_nc_zt=23&_nc_ht=scontent.foua1-1.fna&oh=00_AfAzDChxABeFQI7pz_ETfYEGJWiFYd9xTizjoLn_nRR4jg&oe=64F47EF9", 80, 120],
+  ["https://scontent.foua1-1.fna.fbcdn.net/v/t39.30808-6/332046176_210645078213676_1962009040011621716_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeFQTLVulTBUAuXJj-z6cybf471dtbgPUqzjvV21uA9SrNU0vA-0g_4ZxKLAxMStYiD8erF2QA_Da_jsIUV4IN_h&_nc_ohc=nafMtLHAdmUAX_J4tC5&_nc_zt=23&_nc_ht=scontent.foua1-1.fna&oh=00_AfB8H1B3wV8dyHpP3qkFlVygv4kp1pnHnMVccr73fpN10g&oe=64F4DC8E", 100, 140],
+  
 ];
 
 export default function App() {
@@ -112,6 +111,18 @@ export default function App() {
             height: 500px;
             border-radius: 20px; /* Ajoutez le rayon de bordure que vous souhaitez */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Ajoutez l'ombre souhaitée */
+          
+          }
+          .scroll-section::-webkit-scrollbar {
+            width: 0.5em; /* Largeur de la barre de défilement */
+          }
+
+          .scroll-section::-webkit-scrollbar-track {
+            background: transparent; /* Couleur de fond de la barre de défilement */
+          }
+
+          .scroll-section::-webkit-scrollbar-thumb {
+            background: transparent; /* Couleur de la poignée de la barre de défilement */
           }
         `}
       </style>
