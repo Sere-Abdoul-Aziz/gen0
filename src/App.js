@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import HomePage from './Pages/home';
 import PortfolioPage from './Pages/porf';
@@ -18,8 +17,6 @@ function App() {
         <Route path="/EventOrganizer" element={<EventOrganizer />} />
         <Route path="/Services" element={<ServicesPage />} />
       </Routes>
-      
-    
   </Router>
   </div>
   );
