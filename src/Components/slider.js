@@ -110,7 +110,7 @@ export default function Slider() {
         <SwiperSlide 
         style={{
           'background-image':
-            'url(https://scontent.foua1-1.fna.fbcdn.net/v/t39.30808-6/365774376_238836609112057_1807005516239864233_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeFi9wRyRn4mKvyA1nYWXpdSoEwn-y-n2SWgTCf7L6fZJcbTWbBTQnkwZhsZWdvleug_6Kubv4-mxPmZqUorPRDw&_nc_ohc=LpdAIc-tfpgAX_1_QNr&_nc_zt=23&_nc_ht=scontent.foua1-1.fna&oh=00_AfBVSC8aAhzHeKW4Cx3lqCsWpZp8v50pBGW5KV-w_xmf0w&oe=64E8F848)',
+            'url(https://firebasestorage.googleapis.com/v0/b/geno-41aa5.appspot.com/o/images%2Fimg2.jpg?alt=media&token=d49329cf-c48a-46b3-b52d-88971b751f57)',
             backgroundSize: 'cover',
         }}
         >
@@ -119,7 +119,7 @@ export default function Slider() {
        <SwiperSlide
         style={{
           'background-image':
-            'url(https://scontent.foua1-1.fna.fbcdn.net/v/t39.30808-6/365776557_238844759111242_528672792154084087_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeEHOstum0xE550qSnbyM2S-glSAZ2JFch6CVIBnYkVyHkvbAcXbNSIO4w8unaAQFWAf-WLd86ZKrO0sKLkc7ZJm&_nc_ohc=015x-YqxyZ8AX9Pg85_&_nc_zt=23&_nc_ht=scontent.foua1-1.fna&oh=00_AfA6IVT9Xrxzg74LzQaLefh7oEMzF9w55SFZOQX0s9_x6A&oe=64E88F5A)',
+            'url(https://firebasestorage.googleapis.com/v0/b/geno-41aa5.appspot.com/o/images%2Fimg1.jpg?alt=media&token=e57315fb-e95b-49f3-a64c-740d8e7c32fe)',
             backgroundSize: 'cover',
         }}
         >
@@ -127,7 +127,7 @@ export default function Slider() {
         <SwiperSlide
         style={{
           'background-image':
-            'url(https://scontent.foua1-1.fna.fbcdn.net/v/t39.30808-6/363979827_238828579112860_3648883382059748956_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeG1qdsPlz86ROTC1biR-j2x_UczD4QeLF_9RzMPhB4sX21lABeDORy5sLp2luqZFw6wiJxAASC-23ONKx8YbVqo&_nc_ohc=Yz0T7Qvq2hoAX_vyuNs&_nc_zt=23&_nc_ht=scontent.foua1-1.fna&oh=00_AfA-3b1b-4NYHVo6kBn6Co71-JK-eBSpvFITaNs1m-hzRw&oe=64E8A179)',
+            'url(https://firebasestorage.googleapis.com/v0/b/geno-41aa5.appspot.com/o/images%2Fimg3.jpg?alt=media&token=8550cfc7-7bb9-44c9-86c2-48e2e4b0cff6)',
             backgroundSize: 'cover',
         }}
         >

@@ -1,10 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import Box from '@mui/joy/Box';
-import Card from '@mui/joy/Card';
-import CardContent from '@mui/joy/CardContent';
-import CardCover from '@mui/joy/CardCover';
 import DyPic from '../Components/mansory.tsx';
+import Navbar from '../Components/navbar';
 
 const portfolioItems = [
   {
@@ -20,7 +16,7 @@ const portfolioItems = [
 
 const PortfolioPage = () => {
   return (
-    <DyPic/>
+    <><Navbar /><DyPic /></>
   );
 };
 

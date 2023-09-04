@@ -33,7 +33,8 @@
     width: 100%;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     z-index: 1000;
-    background-color: #f7f3eb;
+    /* background-color: #f7f3eb; */
+    background-color: #9CACA4;
     backdrop-filter: blur(10px);
     padding: 20px 0px;
   }
@@ -83,3 +84,36 @@
       background-color: #507a3d;
     }
   }
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-center {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  border-radius: 20%;
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.link-style {
+  text-decoration: none;
+  outline: none; /* Supprime le contour bleu du focus */
+}
+
+.link-style:focus {
+  outline: none; /* Supprime également le contour bleu du focus */
+}

@@ -12,15 +12,14 @@ import Box from '@mui/joy/Box';
 import Navbar from '../Components/navbar';
 import MediaCover from '../Components/picture';
 import Scrool from '../Components/scrool.tsx';
-import Square from '../Components/square.tsx';
 import Gesture from '../Components/gesture.tsx';
+import F00ter from '../Components/footer';
 import Slider from '../Components/slider';
-import PortfolioPage from './porfolio';
+
 
 
 const HomePage = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [visibleSections, setVisibleSections] = useState([]);
   const handleScroll = () => {
     setScrollPosition(window.scrollY);
   };
@@ -44,6 +43,14 @@ const HomePage = () => {
     triggerOnce: true, 
     threshold: 0.2, 
   });
+  const [T0xtRef, T0xtInView] = useInView({
+    triggerOnce: true, 
+    threshold: 0.2, 
+  });
+  const [T1xtRef, T1xtInView] = useInView({
+    triggerOnce: true, 
+    threshold: 0.2, 
+  });
 
   const [MediaCoverRef, MediaCoverInView] = useInView({
     triggerOnce: true, 
@@ -64,38 +71,26 @@ const HomePage = () => {
     const percentage = (scrollPosition / (document.body.scrollHeight - window.innerHeight)) * 100;
 
     // Define your color stops based on scrolling progress
-    if (percentage < 10) {
-      return '#305421';
-    } else if (percentage < 20) {
-      return ' #40652f';
-    } else if (percentage < 30) {
-      return ' #507a3d';
-    } else if (percentage < 40) {
-      return ' #609e4c';
+    if (percentage < 25) {
+      return '#1A5653';
     } else if (percentage < 50) {
-      return '#70b95a';
-    } else if (percentage < 60) {
-      return '#80d369';
-    } else if (percentage < 70) {
-      return ' #91e777';
-    } else if (percentage < 80) {
-      return '  #a1fc86';
-    } else if (percentage < 90) {
-      return ' #b1f5b6';
+      return '#107869';
+    } else if (percentage < 75) {
+      return ' #08313A';
     } else if (percentage < 100) {
-      return '#40652f';
-    }
+      return '#41504F ';
+    } 
 
-    return '#305421';
+    return '#41504F';
   };
   return (
-    <div>
-      <style>
+    <div style={{ margin: 0, padding: 0 }}>
+       <style>
         {`
           /* ... Your other styles ... */
           .main-section {
             background-color: ${calculateBackgroundColor()};
-            transition: background-color 0.5s ease-in-out;
+            transition: background-color 1s ease-in-out;
           }
         `}
       </style>
@@ -122,7 +117,12 @@ const HomePage = () => {
           ref={cardVariantsRef}
           initial={{ opacity: 0, y: -100 }}
           animate={cardVariantsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
-          transition={{ duration: 1, delay: 0.2 }} // Ajustez ces valeurs selon vos préférences
+          transition={{ duration: 1, delay: 0.2 }}
+          style={{
+            width: '100%',
+            marginLeft: '250px',
+
+          }}
         >
           <CardVariants />
         </motion.div>
@@ -216,8 +216,12 @@ const HomePage = () => {
 
 
       </section>
+      <section className="scroll-section main-section" style={{ height: "calc(100vh - 100px)", overflow: "scroll", padding: '40px', alignItems: 'center', justifyContent: 'center', }} >
+          <Scrool />
+        </section>
       <div >
         <h1>Notre Vision</h1>
+        </div>
         <section className="main-section" >
           <div style={{ marginBottom: '150px' }}>
              <motion.div
@@ -283,7 +287,7 @@ const HomePage = () => {
           ref={MediaCoverRef}
           initial={{ opacity: 0, x: -100 }}
           animate={MediaCoverInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
-          transition={{ duration: 1, delay: 0.2 }} // Ajustez ces valeurs selon vos préférences
+          transition={{ duration: 1, delay: 0.2 }} 
         >
          <MediaCover mwith={500} height={300} image='https://scontent.foua1-1.fna.fbcdn.net/v/t39.30808-6/365774376_238836609112057_1807005516239864233_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeFi9wRyRn4mKvyA1nYWXpdSoEwn-y-n2SWgTCf7L6fZJcbTWbBTQnkwZhsZWdvleug_6Kubv4-mxPmZqUorPRDw&_nc_ohc=8YGR2cQiEQgAX8t0_ib&_nc_zt=23&_nc_ht=scontent.foua1-1.fna&oh=00_AfDhYBfb7ylVnO6xgWpb3MdXTgCIvwAECV0h_-pMrfKQUQ&oe=64F4D5C8' />
                      
@@ -296,11 +300,24 @@ const HomePage = () => {
 
         </section>
         <section className="main-section" style={{ padding: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', }}>
-          <div style={{ flex: 1 }}>
+        <motion.div
+          ref={T1xtRef}
+          initial={{ opacity: 0, x: -100 }}
+          animate={T1xtInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+          transition={{ duration: 1, delay: 0.2 }} 
+        >
+          <div style={{ flex: 1 , }}>
             <h2>Notre Mission</h2>
-            <p>Nous sommes là pour rendre votre événement inoubliable...</p>
+            <p>Nous sommes là pour rendre votre événement ...</p>
           </div>
+          </motion.div>
           <div style={{ flex: 1 }} >
+          <motion.div
+          ref={B0xRef}
+          initial={{ opacity: 0, x: -100 }}
+          animate={B0xInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+          transition={{ duration: 1, delay: 0.2 }} 
+        >
           <Box
               sx={{
                 width: '100%',
@@ -308,15 +325,11 @@ const HomePage = () => {
                 maxWidth: 500,
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fill, minmax(500px, 1fr))',
+                marginLeft: '200px',
 
               }}
             >
-              <motion.div
-          ref={B0xRef}
-          initial={{ opacity: 0, x: -100 }}
-          animate={B0xInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
-          transition={{ duration: 1, delay: 0.2 }} // Ajustez ces valeurs selon vos préférences
-        >
+              
                 <Card variant="soft"
                 sx={{
                   borderRadius: '200px 30px 30px 30px', // Arrondir les coins supérieurs gauche, supérieurs droit et inférieur gauche
@@ -336,22 +349,17 @@ const HomePage = () => {
                     overflow: 'hidden', // Cacher tout contenu dépassant de la CardCover
                     background: `url("https://scontent.foua1-1.fna.fbcdn.net/v/t39.30808-6/355745557_209922245336827_5388237656287230886_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHd5PkTAfqaXlsBlXxkm0yNAxXCoeQdPOADFcKh5B084BgmwrPg5Q3_WP7QlkOy0mk6XnCFDLu6naR-JeIgpb8Z&_nc_ohc=zvIAhItSingAX_3r2d-&_nc_zt=23&_nc_ht=scontent.foua1-1.fna&oh=00_AfCIDKkEuwkj7uj4_rAN6rVXhhkvtNJHHaFUzc2UmzBGkg&oe=64F48776")`,
                     backgroundPosition: '50% 0%', // Positionner l'image au centre en bas de la CardCover
-                    backgroundSize: 'cover', // Ajuster la taille de l'image pour couvrir toute la CardCover
+                    backgroundSize: 'cover', 
                   }}
                 />
                 
                 <CardContent>
-                  {/* Contenu de la carte */}
+                  
                 </CardContent>
               </Card>
-        </motion.div>
+        
               
-              <motion.div
-          ref={B0xRef}
-          initial={{ opacity: 0, x: 0,  y:100 }}
-          animate={B0xInView ? { opacity: 1, x: 0, y:0 } : { opacity: 0, x: 0,  y:100 }}
-          transition={{ duration: 1, delay: 0.2 }} // Ajustez ces valeurs selon vos préférences
-        >
+              
                 <Card variant="soft"
                 sx={{
                   borderRadius: '30px 30px 200px 30px', // Arrondir les coins supérieurs gauche, supérieurs droit et inférieur gauche
@@ -376,23 +384,22 @@ const HomePage = () => {
                   {/* Contenu de la carte */}
                 </CardContent>
               </Card>
-        </motion.div>
+        
               
             </Box>   
-            
+            </motion.div>
           </div>
 
 
 
         </section>
         <section className="main-section" style={{ padding: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', }}>
-
           <div style={{ flex: 1 }} >
             
             <motion.div
-          ref={B0xRef}
+          ref={B1xRef}
           initial={{ opacity: 0, x: 100 }}
-          animate={B0xInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+          animate={B1xInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
           transition={{ duration: 1, delay: 0.2 }} // Ajustez ces valeurs selon vos préférences
         >
          <Box
@@ -458,23 +465,29 @@ const HomePage = () => {
             </Box>           
         </motion.div>
           </div>
+        
           <div style={{ flex: 1 }}>
+          <motion.div
+          ref={T0xtRef}
+          initial={{ opacity: 0, y: -100 }}
+          animate={T0xtInView ? { opacity: 1, x: 0 } : { opacity: 0, y: -100 }}
+          transition={{ duration: 1, delay: 0.2 }} // Ajustez ces valeurs selon vos préférences
+        >
             <h2>Notre Mission</h2>
-            <p>Nous sommes là pour rendre votre événement inoubliable...</p>
+            <p>Nous sommes là pour rendre votre événement inoubliable..</p>
+            </motion.div>
           </div>
 
-
+        
         </section>
-        <section className="scroll-section main-section" style={{ height: "calc(100vh - 100px)", overflow: "scroll", padding: '40px', alignItems: 'center', justifyContent: 'center', }} >
-          <Scrool />
-        </section>
-        <section style={{ zIndex: 9999 }}>
+        
+        <section style={{ zIndex: 9999, }}>
           <Gesture />
         </section>
-      </div>
-
-
-
+        <footer>
+        <F00ter/>
+        </footer>
+        
     </div>
   );
 };
