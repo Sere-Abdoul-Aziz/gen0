@@ -4,7 +4,7 @@ import { motion, useAnimation } from 'framer-motion';
 import '../style/navbar.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 //import {Button, Grid, Divider, Accordion, AccordionItem, AccordionButton, AccordionPanel, CardContent, Typography   } from '@mui/joy/';
-import CardVariants from '../Components/card';
+
 import CardCover from '@mui/joy/CardCover';
 import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
@@ -23,10 +23,7 @@ const HomePage = () => {
   const handleScroll = () => {
     setScrollPosition(window.scrollY);
   };
-  const [cardVariantsRef, cardVariantsInView] = useInView({
-    triggerOnce: true, 
-    threshold: 0.2, 
-  });
+
   const [BoxRef, BoxInView] = useInView({
     triggerOnce: true, 
     threshold: 0.2, 
@@ -105,30 +102,7 @@ const HomePage = () => {
         <Slider />
 
       </section>
-      <section style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh', // Ajustez la hauteur à vos besoins
-      }}
-        className="main-section"
-      >
-        <motion.div
-          ref={cardVariantsRef}
-          initial={{ opacity: 0, y: -100 }}
-          animate={cardVariantsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          style={{
-            width: '100%',
-            marginLeft: '250px',
 
-          }}
-        >
-          <CardVariants />
-        </motion.div>
-        
-
-      </section>
 
       <div >
         <h1>Notre Vision</h1>
