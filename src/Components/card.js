@@ -3,7 +3,7 @@ import Box from '@mui/joy/Box';
 import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
 import CardCover from '@mui/joy/CardCover';
-// import Typography from '@mui/joy/Typography';
+import Typography from '@mui/joy/Typography';
 import { motion } from "framer-motion"; // Importer motion depuis Framer Motion
 
 
@@ -42,8 +42,28 @@ export default function CardVariants() {
       backgroundSize: 'cover', // Ajuster la taille de l'image pour couvrir toute la CardCover
     }}
   />
-      <CardContent>
-        
+      <CardContent
+       sx={{
+        display: 'flex',
+        justifyContent: 'center', // Centre le contenu verticalement
+        alignItems: 'center', // Centre le contenu horizontalement
+      }}
+      >
+      <Typography
+      level="h1"
+      fontWeight="lg"
+      textColor="#fff"
+      textAlign="center"
+      p={2}
+      noWrap
+      variant="plain"
+      mt={{ xs: 12, sm: 18 }}
+      sx={{
+        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+      }}
+    >
+          Mariage
+        </Typography>
       </CardContent>
     </Card>
     </motion.div>
@@ -68,8 +88,28 @@ export default function CardVariants() {
       backgroundSize: 'cover', // Ajuster la taille de l'image pour couvrir toute la CardCover
     }}
   />
-      <CardContent>
-        
+      <CardContent
+       sx={{
+        display: 'flex',
+        justifyContent: 'center', // Centre le contenu verticalement
+        alignItems: 'center', // Centre le contenu horizontalement
+      }}
+      >
+      <Typography
+      level="h1"
+      fontWeight="lg"
+      textColor="#fff"
+      textAlign="center"
+      p={2}
+      noWrap
+      variant="plain"
+      mt={{ xs: 12, sm: 18 }}
+      sx={{
+        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+      }}
+    >
+          Mariage
+        </Typography>
       </CardContent>
     </Card>
     </motion.div>
@@ -94,8 +134,28 @@ export default function CardVariants() {
       backgroundSize: 'cover', // Ajuster la taille de l'image pour couvrir toute la CardCover
     }}
   />
-      <CardContent>
-        
+            <CardContent
+       sx={{
+        display: 'flex',
+        justifyContent: 'center', // Centre le contenu verticalement
+        alignItems: 'center', // Centre le contenu horizontalement
+      }}
+      >
+      <Typography
+      level="h1"
+      fontWeight="lg"
+      textColor="#fff"
+      textAlign="center"
+      p={2}
+      noWrap
+      variant="plain"
+      mt={{ xs: 12, sm: 18 }}
+      sx={{
+        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+      }}
+    >
+          Mariage
+        </Typography>
       </CardContent>
     </Card>
     </motion.div>
@@ -120,8 +180,28 @@ export default function CardVariants() {
       backgroundSize: 'cover', // Ajuster la taille de l'image pour couvrir toute la CardCover
     }}
   />
-      <CardContent>
-        
+            <CardContent
+       sx={{
+        display: 'flex',
+        justifyContent: 'center', // Centre le contenu verticalement
+        alignItems: 'center', // Centre le contenu horizontalement
+      }}
+      >
+      <Typography
+      level="h1"
+      fontWeight="lg"
+      textColor="#fff"
+      textAlign="center"
+      p={2}
+      noWrap
+      variant="plain"
+      mt={{ xs: 12, sm: 18 }}
+      sx={{
+        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+      }}
+    >
+          Mariage
+        </Typography>
       </CardContent>
     </Card>
     </motion.div>

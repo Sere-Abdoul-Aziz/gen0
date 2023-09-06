@@ -214,11 +214,14 @@ export default function Navbar() {
                 <Link to="/Porfolio" className="link-style">
                   <Tab disableIndicator className="nav-tab" label="Porfolio" >Porfolio </Tab>
                 </Link>
-                <Link to="/" className="link-style" >
+                <Link to="/About" className="link-style" >
                   <Tab disableIndicator className="nav-tab" label="A Propos" >A Propos </Tab>
                 </Link>
-
+                <Link to="/Contact" className="link-style" >
                 <Tab disableIndicator className="nav-tab" label="Contact" >Contact </Tab>
+                </Link>
+
+                
 
               </TabList>
             </div>
