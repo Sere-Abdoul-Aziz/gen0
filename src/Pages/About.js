@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
 import Navbar from '../Components/navbar';
 import Banner from '../Components/banner';
+import F00ter from '../Components/footer';
 import Ban from '../Components/ban';
 import CardVariants from '../Components/card';
 import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
@@ -16,7 +17,9 @@ const AboutPage = () => {
     threshold: 0.2, 
   });
   return (
-    <div>
+    <div 
+    style={{backgroundColor: '#f7f3eb'}}
+    >
       {/* Bannière */}
       <Navbar />
       <header>
@@ -57,7 +60,7 @@ const AboutPage = () => {
       color: 'red', // Changez la couleur du texte selon votre préférence
     }}
   >
-    Introduction
+    A_Propos
   </Typography>
 </div>
 
@@ -88,6 +91,7 @@ const AboutPage = () => {
       {/* cartes */}
       <section  style={{ 
         marginTop: '100px',
+        marginBottom: '100px',
         display: 'flex',
         // justifyContent: 'space-between'
       }}
@@ -264,6 +268,9 @@ const AboutPage = () => {
       </div>
 
       </section>
+      <footer>
+        <F00ter/>
+        </footer>
     </div>
   );
 };

@@ -3,6 +3,8 @@ import { Box, Container, Grid, Typography } from '@mui/joy';
 import { motion } from 'framer-motion';
 import Cart from '../Components/cart';
 import Navbar from '../Components/navbar';
+import F00ter from '../Components/footer';
+import Ban from '../Components/ban';
 
 const PortfolioPage = () => {
   const portfolioItems = [
@@ -38,7 +40,19 @@ const PortfolioPage = () => {
   ];
 
   return (
-    <><Navbar /><Box sx={{ backgroundColor: '#f7f3eb', padding: '80px 0' }}>
+    <div 
+    style={{backgroundColor: '#f7f3eb'}}
+   
+    ><Navbar />
+              <Ban
+            videoUrl={
+              "https://firebasestorage.googleapis.com/v0/b/geno-41aa5.appspot.com/o/video%2FDesign%20sans%20titre.mp4?alt=media&token=858248a2-0163-454d-8871-04280a6fbc25"
+            }
+            Titre={"Portfolio"} 
+            poster={""}
+           
+          />
+    <Box sx={{ padding: '80px 0' }}>
           <Container>
               <Typography variant="h2" align="center" sx={{ mb: 4 }}>
                   Notre Portfolio d'Événements
@@ -61,7 +75,11 @@ const PortfolioPage = () => {
                   ))}
               </Grid>
           </Container>
-      </Box></>
+      </Box>
+      <footer>
+        <F00ter/>
+        </footer>
+      </div>
   );
 };
 

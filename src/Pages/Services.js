@@ -5,6 +5,7 @@ import { motion, useAnimation } from 'framer-motion';
 import Navbar from '../Components/navbar';
 import Banner from '../Components/banner';
 import Ban from '../Components/ban';
+import F00ter from '../Components/footer';
 import CardVariants from '../Components/card';
 import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import Diversity1RoundedIcon from '@mui/icons-material/Diversity1Rounded';
@@ -16,7 +17,9 @@ const ServicesPage = () => {
     threshold: 0.2, 
   });
   return (
-    <div>
+    <div 
+    style={{backgroundColor: '#f7f3eb'}}
+    >
       {/* Bannière */}
       <Navbar />
       <header>
@@ -151,6 +154,9 @@ const ServicesPage = () => {
         
 
       </section>
+      <footer>
+        <F00ter/>
+        </footer>
     </div>
   );
 };

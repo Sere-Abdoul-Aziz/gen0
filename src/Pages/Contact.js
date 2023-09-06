@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
 import Navbar from '../Components/navbar';
 import Banner from '../Components/banner';
+import F00ter from '../Components/footer';
 import BorderAllRoundedIcon from '@mui/icons-material/BorderAllRounded';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
@@ -50,7 +51,9 @@ const ContactPage = () => {
         // phoneNumber, email, eventType et message contiendront les données du formulaire
     };
     return (
-        <div>
+        <div 
+        style={{backgroundColor: '#f7f3eb'}}
+        >
             {/* Bannière */}
             <Navbar />
             <header>
@@ -338,6 +341,9 @@ const ContactPage = () => {
                     </CardContent>
                 </Card>
             </section>
+            <footer>
+        <F00ter/>
+        </footer>
         </div>
     );
 };
