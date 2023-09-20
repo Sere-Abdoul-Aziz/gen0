@@ -63,10 +63,6 @@ const AboutPage = () => {
     A_Propos
   </Typography>
 </div>
-
-       
-      
-
       {/* Paragraphe à droite */}
       <div  flex={1}
       >
