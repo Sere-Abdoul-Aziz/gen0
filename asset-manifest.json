@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/genotest/static/css/main.6879b390.css",
+    "main.js": "/genotest/static/js/main.db24b56a.js",
+    "static/js/787.122e4214.chunk.js": "/genotest/static/js/787.122e4214.chunk.js",
+    "index.html": "/genotest/index.html",
+    "main.6879b390.css.map": "/genotest/static/css/main.6879b390.css.map",
+    "main.db24b56a.js.map": "/genotest/static/js/main.db24b56a.js.map",
+    "787.122e4214.chunk.js.map": "/genotest/static/js/787.122e4214.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6879b390.css",
+    "static/js/main.db24b56a.js"
+  ]
+}
